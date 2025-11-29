@@ -17,7 +17,7 @@ class GorevListesi:
 
     # FONKSİYON 2: Listeyi ekrana yazar
     def listele(self):
-        print("\n--- YAPILACAKLAR ---")
+        print("\nYAPILACAKLAR")
         # Döngü ile listeyi gezer
         for i in range(len(self.liste)):
             gorev = self.liste[i]
@@ -43,7 +43,7 @@ class GorevListesi:
             silinen = self.liste.pop(index)
             print(f"Silindi: {silinen.isim}")
         else:
-            print("Hata: Böyle bir numara yok.")
+            print("Böyle bir numara yok.")
 
 
 class Gorev:
@@ -59,10 +59,10 @@ class GorevListesi:
     def ekle(self, isim):
         yeni_gorev = Gorev(isim)
         self.liste.append(yeni_gorev)
-        print("--> Eklendi.")
+        print("Eklendi.")
 
     def listele(self):
-        print("\n--- LİSTE ---")
+        print("\nLİSTE")
         for i in range(len(self.liste)):
             gorev = self.liste[i]
             durum = "[X]" if gorev.yapildi_mi else "[ ]"
@@ -108,7 +108,7 @@ def sistemi_baslat():
             no = int(input("Silinecek No: "))
             uygulama.sil(no)
         elif secim == "5":
-            print("Güle güle...")
+            print("çıkış yapılıyor")
             break
         else:
             print("Hatalı tuşlama.")
